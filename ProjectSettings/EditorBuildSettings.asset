@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GabyGym.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/GabyGymNivel1.unity
+    guid: 8014740b3caf2c64a9b53b218cf4fdca
+  - enabled: 1
+    path: Assets/Scenes/GabyGymNivel2.unity
+    guid: 01cae2c956d285745b59fa2bf4bc9c4b
   m_configObjects: {}
