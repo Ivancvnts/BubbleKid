@@ -727,6 +727,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &202183909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2461974317604294708, guid: 0cba2797e10d3624cb7201d51398c281, type: 3}
+  m_PrefabInstance: {fileID: 1766156819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &227038274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2141,6 +2146,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1543528057831744401, guid: c22321b19ad95564281a3dfaa02a5f2e, type: 3}
   m_PrefabInstance: {fileID: 1496951612}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &644518141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2461974317604294708, guid: 0cba2797e10d3624cb7201d51398c281, type: 3}
+  m_PrefabInstance: {fileID: 1132437436474003018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &645207116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2414,6 +2424,10 @@ PrefabInstance:
     - target: {fileID: 6422646674559147558, guid: a8ae5658493791b42a72a1f8f97e1048, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369733411054384317, guid: a8ae5658493791b42a72a1f8f97e1048, type: 3}
+      propertyPath: jumpTime
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4564,7 +4578,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3088558617554471346, guid: de9c5dab4f6f0714e8dd37306ed044af, type: 3}
       propertyPath: m_Name
-      value: Boton (1)
+      value: Boton2
       objectReference: {fileID: 0}
     - target: {fileID: 4521748441257877428, guid: de9c5dab4f6f0714e8dd37306ed044af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4606,6 +4620,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5310393054988671232, guid: de9c5dab4f6f0714e8dd37306ed044af, type: 3}
+      propertyPath: yellowFanToActivate
+      value: 
+      objectReference: {fileID: 644518141}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4985,7 +5003,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2461974317604294708, guid: 0cba2797e10d3624cb7201d51398c281, type: 3}
       propertyPath: m_Name
-      value: VenitladorAmarillo (1)
+      value: VenitladorAmarillo1
       objectReference: {fileID: 0}
     - target: {fileID: 3512764562435576257, guid: 0cba2797e10d3624cb7201d51398c281, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13716,7 +13734,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2461974317604294708, guid: 0cba2797e10d3624cb7201d51398c281, type: 3}
       propertyPath: m_Name
-      value: VenitladorAmarillo
+      value: VenitladorAmarillo2
       objectReference: {fileID: 0}
     - target: {fileID: 3512764562435576257, guid: 0cba2797e10d3624cb7201d51398c281, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14015,7 +14033,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3088558617554471346, guid: de9c5dab4f6f0714e8dd37306ed044af, type: 3}
       propertyPath: m_Name
-      value: Boton
+      value: Boton1
       objectReference: {fileID: 0}
     - target: {fileID: 4521748441257877428, guid: de9c5dab4f6f0714e8dd37306ed044af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14057,6 +14075,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5310393054988671232, guid: de9c5dab4f6f0714e8dd37306ed044af, type: 3}
+      propertyPath: yellowFanToActivate
+      value: 
+      objectReference: {fileID: 202183909}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14200,11 +14222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8189005194417733563, guid: d819e862b5de36a4e95fe00f06c981ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.47
+      value: 6.73
       objectReference: {fileID: 0}
     - target: {fileID: 8189005194417733563, guid: d819e862b5de36a4e95fe00f06c981ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.79
+      value: 4.77
       objectReference: {fileID: 0}
     - target: {fileID: 8189005194417733563, guid: d819e862b5de36a4e95fe00f06c981ea, type: 3}
       propertyPath: m_LocalPosition.z
