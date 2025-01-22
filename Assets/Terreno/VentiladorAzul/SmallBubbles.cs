@@ -6,7 +6,11 @@ public class SmallBubbles : MonoBehaviour
 {
     [SerializeField] float minLifeTime;
     [SerializeField] float maxLifeTime;
+    [SerializeField] float minSpeed;
+    [SerializeField] float maxSpeed;
 
+    private Rigidbody rb;
+    private float speed;
     private float currentLifeTime;
     private float duration;
 
@@ -15,6 +19,7 @@ public class SmallBubbles : MonoBehaviour
     {
         currentLifeTime = 0;
         duration = Random.Range(minLifeTime, maxLifeTime);
+        speed = Random.Range(minSpeed, maxSpeed);
     }
 
     // Update is called once per frame

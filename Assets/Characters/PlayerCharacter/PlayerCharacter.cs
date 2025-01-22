@@ -80,7 +80,7 @@ public class PlayerCharacter : MonoBehaviour
             isJumping = false;
             animator.SetBool("isJumping", isJumping);
             jumpCounter = 0;
-
+            
             if(rb.velocity.y > 0)
             {
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.6f);
