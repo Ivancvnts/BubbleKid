@@ -123,6 +123,10 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isOnBubble = false;
+    }
 
     private void flip()
     {
