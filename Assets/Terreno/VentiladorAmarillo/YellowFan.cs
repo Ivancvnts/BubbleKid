@@ -12,6 +12,10 @@ public class YellowFan : MonoBehaviour
     private void Start()
     {
         force /= 100;
+        if (isOn)
+        {
+            Activate();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
