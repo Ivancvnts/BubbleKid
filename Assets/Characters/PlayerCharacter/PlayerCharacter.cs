@@ -24,7 +24,8 @@ public class PlayerCharacter : MonoBehaviour
     float jumpCounter;
     bool isFacingRight = true;
     float horizontalInput;
-
+    bool isOnBubble;
+    Vector2 bubbleMovementDirection;
 
     // Start is called before the first frame update
     void Start()
@@ -40,9 +41,21 @@ public class PlayerCharacter : MonoBehaviour
 
         // Movimiento horizontal
         horizontalInput = Input.GetAxis("Horizontal");
-        flip();
 
-        rb.velocity = new Vector2(horizontalInput * velocity, rb.velocity.y);
+        if (isOnBubble)
+        {
+            Vector2 bubbleInfluence = bubbleMovementDirection;
+            Vector2 playerMovement = new Vector2(horizontalInput * velocity, rb.velocity.y);
+
+            // Aplicamos el movimiento de la burbuja solo en horizontal
+            rb.velocity = new Vector2(playerMovement.x + bubbleInfluence.x, playerMovement.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(horizontalInput * velocity, rb.velocity.y);
+        }
+
+        flip();
          
 
         // Salto
@@ -101,6 +114,16 @@ public class PlayerCharacter : MonoBehaviour
         animator.SetFloat("yVelocity", rb.velocity.y);
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bubble"))
+        {
+            isOnBubble = true; // El jugador está sobre la burbuja
+            bubbleMovementDirection = collision.gameObject.GetComponent<Bubble>().GetMovementDirection(); // Obtener dirección de movimiento de la burbuja
+        }
+    }
+
+
     private void flip()
     {
         if (isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
@@ -112,9 +135,22 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
-
     bool isGrounded()
     {
         return Physics2D.OverlapCapsule(groundCheck.position, new Vector2(0.02f, 0.05f), CapsuleDirection2D.Horizontal, 0, groundLayer);
     }
+
+    public void setIsOnBubble(bool isOnBubble)
+    {
+        if (isOnBubble)
+        {
+            velocity *= 1.6f;
+        }
+        else
+        {
+            velocity /= 1.6f;
+        }
+        
+    }
+
 }

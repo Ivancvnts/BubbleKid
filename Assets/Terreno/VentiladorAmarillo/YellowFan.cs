@@ -4,28 +4,51 @@ using UnityEngine;
 
 public class YellowFan : MonoBehaviour
 {
+    [SerializeField] bool isOn;
+    [SerializeField] float force;
+
     public GameObject windEffects;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        force *= 100000;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        Debug.Log("Colision");
+        if (isOn && collision.CompareTag("Bubble"))
+        {
+            Debug.Log("Empujar burbuja");
+            // Llama al método de la burbuja para establecer la velocidad horizontal
+            Bubble bubble = collision.GetComponent<Bubble>();
+            if (bubble != null)
+            {
+                Vector3 direction = transform.right; // Dirección local del ventilador
+                bubble.SetHorizontalSpeed(force * direction.x);
+            }
+        }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bubble"))
+        {
+            // Llama al método de la burbuja para iniciar la desaceleración
+            Bubble bubble = collision.GetComponent<Bubble>();
+            if (bubble != null)
+            {
+                bubble.ReduceHorizontalSpeed();
+            }
+        }
+    }
+
+    
 
     public void Activate()
     {
-
+        isOn = true;
+        windEffects.SetActive(true);
         Debug.Log("FanActivated");
     }
 }

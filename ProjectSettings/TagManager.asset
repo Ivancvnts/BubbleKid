@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Destroyable
   - Spike
+  - Bubble
   layers:
   - Default
   - TransparentFX

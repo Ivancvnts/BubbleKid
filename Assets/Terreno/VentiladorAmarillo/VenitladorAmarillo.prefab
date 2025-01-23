@@ -80,7 +80,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -7184453141422777021, guid: a8be9d80391091641bb9404b3f4dd067, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.32, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
@@ -166,6 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a9090970f7dab40b7f6fb88d9f9e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn: 0
+  windEffects: {fileID: 8461527958545732961}
 --- !u!1 &8461527958545732961
 GameObject:
   m_ObjectHideFlags: 0
