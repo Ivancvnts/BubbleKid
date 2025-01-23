@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
-  force: 55
+  force: 35
   windEffects: {fileID: 8461527958545732961}
 --- !u!1 &8461527958545732961
 GameObject:

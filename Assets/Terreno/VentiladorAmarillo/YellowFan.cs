@@ -11,21 +11,25 @@ public class YellowFan : MonoBehaviour
 
     private void Start()
     {
-        force *= 100000;
+        force /= 100;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Colision");
+        
         if (isOn && collision.CompareTag("Bubble"))
         {
-            Debug.Log("Empujar burbuja");
+            
             // Llama al método de la burbuja para establecer la velocidad horizontal
             Bubble bubble = collision.GetComponent<Bubble>();
+
             if (bubble != null)
             {
-                Vector3 direction = transform.right; // Dirección local del ventilador
-                bubble.SetHorizontalSpeed(force * direction.x);
+                Vector3 bubblePosition = collision.transform.position;
+                Vector3 fanPosition = transform.position;
+
+                float direction = Mathf.Sign(bubblePosition.x - fanPosition.x);
+                bubble.SetHorizontalSpeed(force * direction);
             }
         }
     }
