@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GabyGymNivel2.unity
     guid: 01cae2c956d285745b59fa2bf4bc9c4b
+  - enabled: 1
+    path: Assets/Scenes/YouWin.unity
+    guid: aecaee4dd92ed2e45a1219dbc46a5354
   m_configObjects: {}
