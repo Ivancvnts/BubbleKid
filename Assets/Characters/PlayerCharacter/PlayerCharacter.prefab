@@ -106,6 +106,7 @@ MonoBehaviour:
   jumpPower: 2
   jumpMultiplayer: 1.05
   fallMultiplayer: 1.1
+  gameManager: {fileID: 3907330849190898781, guid: 388fca8d92f52e64790549917be154d1, type: 3}
   groundCheck: {fileID: 6422646674559147558}
   groundLayer:
     serializedVersion: 2

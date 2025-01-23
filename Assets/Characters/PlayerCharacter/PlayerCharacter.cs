@@ -13,12 +13,14 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] float jumpMultiplayer;
     [SerializeField] float fallMultiplayer;
 
+    public GameManager gameManager;
     public Transform groundCheck;
     public LayerMask groundLayer;
     Vector2 vecGravity;
     
     private Rigidbody2D rb;
     private Animator animator;
+    private bool isDead;
 
     bool isJumping;
     float jumpCounter;
@@ -112,6 +114,16 @@ public class PlayerCharacter : MonoBehaviour
     {
         animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
         animator.SetFloat("yVelocity", rb.velocity.y);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Spike") && !isDead)
+        {
+            isDead = true;
+            gameObject.SetActive(false);
+            gameManager.GameOver();
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
